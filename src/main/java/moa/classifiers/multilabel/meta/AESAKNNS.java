@@ -106,7 +106,7 @@ public class AESAKNNS extends AbstractMultiLabelLearner implements MultiLabelCla
 			}
 			
 			if (warning && this.ADError[i].getEstimation() > ErrEstim) {
-				System.err.println("Change model "+i+"!");
+//				System.err.println("Change model "+i+"!");
 				this.ensemble[i].resetLearning();
 				this.ensemble[i].trainOnInstance(inst);
 				this.ADError[i] = new ADWIN();
