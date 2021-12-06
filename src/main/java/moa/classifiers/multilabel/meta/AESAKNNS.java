@@ -19,13 +19,13 @@ import moa.core.MiscUtils;
 import moa.core.Utils;
 import moa.options.ClassOption;
 
-public class HESAkNN extends AbstractMultiLabelLearner implements MultiLabelClassifier {
+public class AESAKNNS extends AbstractMultiLabelLearner implements MultiLabelClassifier {
 
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	public String getPurposeString() {
-		return "Heterogeneous Ensemble of Self-Adjusting Nearest Neighbors.";
+		return "Adaptive Ensemble of Self-Adjusting Nearest Neighbor Subspaces.";
 	}    
 
 	public ClassOption baseLearnerOption = new ClassOption("baseLearner", 'l', "Classifier to train.", MLSAkNNSubspaces.class, "moa.classifiers.multilabel.MLSAkNNSubspaces");
