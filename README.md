@@ -4,7 +4,7 @@ Multi-label data streams are sequences of multi-label instances arriving over ti
 
 ## Using AESAKNNS
 
-Download the pre-compiled `AESAKNNS-1.0-jar-with-dependencies.jar` or import the project source code into [MOA](https://github.com/Waikato/moa)
+Download the pre-compiled `AESAKNNS-1.0-jar-with-dependencies.jar` or import the project source code into [MOA](https://github.com/Waikato/moa). Download the multi-label [datasets](https://drive.google.com/file/d/1eB3T70aagGSZjSmg4t4s0yIxEjWxLdmz/view?usp=sharing). When changing the dataset file please make sure to also update the parameter `-c` to the number of labels in the dataset. The `c` labels must be the first `c` columns of the dataset.
 
 ```
 java -javaagent:sizeofag-1.0.4.jar -cp AESAKNNS-1.0-jar-with-dependencies.jar moa.DoTask EvaluatePrequentialMultiLabel -e "(PrequentialMultiLabelPerformanceEvaluator)" -s "(MultiTargetArffFileStream -c 6 -f datasets/Scene.arff)" -l "(moa.classifiers.multilabel.meta.AESAKNNS)" -f 100 -d results.csv
